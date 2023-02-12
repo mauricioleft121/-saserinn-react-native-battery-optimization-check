@@ -44,7 +44,7 @@ Battery optimization allows you to put your app into the whitelist. By default, 
 # Installation
 
 ```sh
-$ yarn add react-native-battery-optimization-check
+$ yarn add @saserinn/react-native-battery-optimization-check
 ```
 
 Link is automatic on react native >= 0.60
@@ -52,7 +52,7 @@ Link is automatic on react native >= 0.60
 ### For manual linking :
 
 ```sh
-$ react-native link react-native-battery-optimization-check
+$ react-native link @saserinn/react-native-battery-optimization-check
 ```
 
 # Usage
