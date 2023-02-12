@@ -2,12 +2,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-battery-optimization-check": ["./src/index"]
+      "react-native-battery-optimization-check": ["./index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
-    "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["esnext"],
@@ -23,6 +22,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "declaration": true
   }
 }
