@@ -1,54 +1,10 @@
 {
   "name": "@saserinn/react-native-battery-optimization-check",
-  "version": "1.0.8",
-  "description": "A react-native solution to check if your app runs under battery optimization on Android devices and makes it easy for the user to disable it.",
-  "main": "lib/commonjs/index.js",
-  "types": "lib/typescript/index.d.ts",
-  "files": [
-    "src",
-    "lib",
-    "android",
-    "cpp",
-    "!**/__mocks__",
-    "!**/__tests__",
-    "!android/build",
-    "!**/__fixtures__",
-    "!lib/typescript/example"
-  ],
-  "scripts": {
-    "test": "jest",
-    "prepare": "bob build",
-    "release": "release-it",
-    "typescript": "tsc --noEmit",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn",
-    "lint": "eslint \"**/*.{js,ts,tsx}\""
-  },
-  "keywords": [
-    "doze",
-    "check",
-    "battery",
-    "standby",
-    "android",
-    "wakelock",
-    "optimization",
-    "react-native",
-    "react-component",
-    "battery optimization",
-    "battery optimization check",
-    "IGNORE_BATTERY_OPTIMIZATION_SETTINGS",
-    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
-    "react-native-battery-optimization-check"
-  ],
-  "repository": "https://github.com/losthakkun/react-native-battery-optimization-check",
-  "author": "losthakkun <losthakkun@gmail.com> (https://github.com/losthakkun)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/losthakkun/react-native-battery-optimization-check/issues"
-  },
-  "homepage": "https://github.com/losthakkun/react-native-battery-optimization-check#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+  "version": "1.0.3",
+  "description": "A fork from react-native-battery-optimization-check with the declarations for typescript applications",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
@@ -81,6 +37,41 @@
       "<rootDir>/lib/"
     ]
   },
+  "scripts": {
+    "test": "jest",
+    "typescript": "tsc -declaration index.ts",
+    "example": "yarn --cwd example",
+    "bootstrap": "yarn example && yarn",
+    "lint": "eslint \"**/*.{js,ts,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauricioleft121/react-native-battery-optimization-check.git"
+  },
+  "keywords": [
+    "doze",
+    "check",
+    "battery",
+    "standby",
+    "android",
+    "wakelock",
+    "optimization",
+    "react-native",
+    "react-component",
+    "battery optimization",
+    "battery optimization check",
+    "IGNORE_BATTERY_OPTIMIZATION_SETTINGS",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "react-native-battery-optimization-check",
+    "typescript"
+  ],
+  "author": "mauricioleft121 (mauricioleft121@gmail.com)",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "bugs": {
+    "url": "https://github.com/mauricioleft121/react-native-battery-optimization-check/issues"
+  },
+  "homepage": "https://github.com/mauricioleft121/react-native-battery-optimization-check#readme",
   "eslintConfig": {
     "root": true,
     "parser": "@babel/eslint-parser",
@@ -111,19 +102,5 @@
     "tabWidth": 2,
     "trailingComma": "es5",
     "useTabs": false
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
   }
 }

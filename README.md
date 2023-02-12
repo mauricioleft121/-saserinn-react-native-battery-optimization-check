@@ -23,7 +23,7 @@ If a user leaves a device unplugged and stationary for a period of time, with th
 
 At the conclusion of each maintenance window, the system again enters Doze, suspending network access and deferring jobs, syncs, and alarms. Over time, the system schedules maintenance windows less and less frequently, helping to reduce battery consumption in cases of longer-term inactivity when the device is not connected to a charger.
 
-As soon as the user wakes the device by moving it, turning on the screen, or connecting a charger, the system exits Doze and all apps return to normal activity. 
+As soon as the user wakes the device by moving it, turning on the screen, or connecting a charger, the system exits Doze and all apps return to normal activity.
 
 Here is the list of main restrictions that apply to your application in doze mode:
 
@@ -44,7 +44,7 @@ Battery optimization allows you to put your app into the whitelist. By default, 
 # Installation
 
 ```sh
-$ yarn add react-native-battery-optimization-check
+$ yarn add @saserinn/react-native-battery-optimization-check
 ```
 
 Link is automatic on react native >= 0.60
@@ -52,7 +52,7 @@ Link is automatic on react native >= 0.60
 ### For manual linking :
 
 ```sh
-$ react-native link react-native-battery-optimization-check
+$ react-native link @saserinn/react-native-battery-optimization-check
 ```
 
 # Usage
@@ -69,7 +69,7 @@ There are 3 functions on this library:
 
 Example:
 ```js
-import { BatteryOptEnabled } from "react-native-battery-optimization-check";
+import { BatteryOptEnabled } from "@saserinn/react-native-battery-optimization-check";
 
 BatteryOptEnabled().then((isEnabled)=>{
 	// returns promise<boolean>
@@ -88,7 +88,7 @@ BatteryOptEnabled().then((isEnabled)=>{
 
 Example:
 ```js
-import { OpenOptimizationSettings, BatteryOptEnabled } from "react-native-battery-optimization-check";
+import { OpenOptimizationSettings, BatteryOptEnabled } from "@saserinn/react-native-battery-optimization-check";
 
 BatteryOptEnabled().then((isEnabled)=>{
 	// returns promise<boolean>
@@ -114,7 +114,7 @@ Read more about [Acceptable use cases for exemption](https://developer.android.c
 
 Example:
 ```js
-import { RequestDisableOptimization, BatteryOptEnabled } from "react-native-battery-optimization-check";
+import { RequestDisableOptimization, BatteryOptEnabled } from "@saserinn/react-native-battery-optimization-check";
 
 BatteryOptEnabled().then((isEnabled)=>{
 	// returns promise<boolean>
